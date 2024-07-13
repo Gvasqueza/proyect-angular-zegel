@@ -1,0 +1,10 @@
+<div class="biblioteca">
+    <h2>Listado de Libros</h2>
+    <div class="libros">
+        <div *ngFor="let libro of libros" class="libro">
+            <img [src]="libro.caratula" alt="{{ libro.titulo }}" class="caratula">
+            <h3>{{ libro.titulo }}</h3>
+            <p>{{ libro.contenido }}</p>
+        </div>
+    </div>
+</div>
