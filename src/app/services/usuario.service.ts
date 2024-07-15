@@ -32,6 +32,7 @@ export class UsuarioService {
   }
 
   iniciarSesion(usuario: Partial<Usuario>): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/login`, usuario); // Asegúrate de que la ruta en tu API sea '/login'
+    console.log('UsuarioService: Enviando solicitud de inicio de sesión:', usuario);
+    return this.http.post<any>(`${this.apiUrl}/login`, usuario);
   }
 }
